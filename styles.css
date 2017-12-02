@@ -129,7 +129,7 @@
     padding: 2px 16px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 650px) {
     .container {
         grid-template-areas:
             "h h m m m m m m m m m m"
