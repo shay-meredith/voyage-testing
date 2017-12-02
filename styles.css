@@ -1,8 +1,11 @@
+* {
+    margin: 0;
+}
 .container {
     display: grid;
-    grid-gap: 5px;    
+    grid-gap: 0px;    
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 20vh 60vh 20vh;
+    grid-template-rows: 20vh 58vh 20vh;
     grid-template-areas:
         "m m h h h h h h h h h h"
         "c c c c c c c c c c c c"
@@ -51,87 +54,31 @@
     font-size: .8em;
     display: flex;
     box-sizing: border-box;
-
-    -webkit-perspective: 600px;
-            perspective: 600px;
+    background-color: gray;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
- /* -- make sure to declare a default for every property that you want animated -- */
-  /* -- general styles, including Y axis rotation -- */
-  .panel .front {
-    /*float: none;
-    position: absolute;*/
-    top: 0;
-    left: 0;
-    z-index: 900;
-    width: inherit;
-    height: inherit;
-    border: 1px solid #ccc;
-    background: #6b7077;
-    text-align: center;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+ .panel:hover {
+     transform: scale(1.03);
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ }
 
-    -webkit-transform: rotateX(0) rotateY(0);
-            transform: rotateX(0) rotateY(0);
-
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-
-    /* -- transition is the magic sauce for animation -- */
-    -webkit-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
-  }
-  .panel.flip .front {
-    z-index: 900;
-    border-color: #eee;
-    background: #333;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-
-    -webkit-transform: rotateY(179deg);
-            transform: rotateY(179deg);
-  }
-
-  .panel .back {
-    /*float: none;
-    position: absolute;*/
-    top: 0;
-    left: 0;
-    z-index: 800;
-    width: inherit;
-    height: inherit;
-    border: 1px solid #ccc;
-    background: #333;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-
-    -webkit-transform: rotateY(-179deg);
-            transform: rotateY(-179deg);
-
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-
-    /* -- transition is the magic sauce for animation -- */
-    -webkit-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
-  }
-
-  .panel.flip .back {
-    z-index: 1000;
-    background: #80868d;
-
-    -webkit-transform: rotateX(0) rotateY(0);
-            transform: rotateX(0) rotateY(0);
-
-    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-  }
+ .panel:click {
+    transform: rotateY(60deg);
+ }
 
 .card {
     padding: 2px 16px;
+}
+
+@keyframes flip-card {
+    from {
+
+    }
+    to {
+
+    }
 }
 
 @media screen and (min-width: 650px) {
