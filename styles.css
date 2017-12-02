@@ -24,6 +24,11 @@
     grid-area: c;
     text-align: center;
     background-color: blue;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .info {
@@ -40,12 +45,12 @@
 }
 
 .panel {
-    float: left;
-    width: 400px;
+    width: 200px;
     height: 400px;
     margin: 20px;
-    position: relative;
     font-size: .8em;
+    display: flex;
+    box-sizing: border-box;
 
     -webkit-perspective: 600px;
             perspective: 600px;
@@ -54,8 +59,8 @@
  /* -- make sure to declare a default for every property that you want animated -- */
   /* -- general styles, including Y axis rotation -- */
   .panel .front {
-    float: none;
-    position: absolute;
+    /*float: none;
+    position: absolute;*/
     top: 0;
     left: 0;
     z-index: 900;
@@ -90,8 +95,8 @@
   }
 
   .panel .back {
-    float: none;
-    position: absolute;
+    /*float: none;
+    position: absolute;*/
     top: 0;
     left: 0;
     z-index: 800;
