@@ -12,7 +12,7 @@ li {
     display: grid;
     grid-gap: 0px;    
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10vh 68vh 20vh;
+    grid-template-rows: 10vh 70vh 20vh;
     grid-template-areas:
         "m m h h h h h h h h h h"
         "c c c c c c c c c c c c"
@@ -31,7 +31,21 @@ li {
     display: block;
 }
 button {
+    background-color: #1E88E5;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    margin: 10px 5px 0px 5px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+button:hover {
+    box-shadow: 1px 2px 4px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 .content {
     grid-area: c;
@@ -80,7 +94,6 @@ button {
     backface-visibility: hidden;
     transform-style: preserve3d;
     transition: all 0.4s;
-    z-index: -1;
   }
   
   .front {
@@ -98,13 +111,11 @@ button {
   .flipped .back {
     transform: rotateY(0deg);
     position: absolute;
-    transform: translate3d(100px, 50px, 10px);
   }
   
   .flipped .front {
     transform: rotateY(180deg);
     position: absolute;
-    transform: translate3d(100px, 50px, 10px);
   }
 
 .card {
