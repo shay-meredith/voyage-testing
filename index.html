@@ -11,6 +11,8 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="index.js"></script>
 </head>
@@ -19,7 +21,7 @@
     <div class="container">
         <div class="header">HEADER</div>
         <div class="menu">
-            <div id="nav-icon">
+            <div class="toggle-drawer" id="nav-icon">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -30,7 +32,22 @@
             <button class="menu-button">Button</button>
             <button class="menu-button">Button</button>
             <button class="menu-button">Button</button>
+
+            <!-- FIRST, YOU NEED A CONTAINER THAT CONTAINS TWO BLOCK ELEMENTS:
+    ONE IS FOR THE DRAWER, 
+    THE OTHER IS FOR THE CONTENT THAT WILL SLIDE WHEN DRAWER IS OPEN -->
+
+            <div class="drawer-container">
+
+                <div class="drawer">
+                    <!-- FILL IN ANY LINKS, MENU ETC. YOU NEED IN HERE -->
+                    Drawer
+                </div>
+                <div class="menu-content">
+                </div>
+            </div>
         </div>
+
         <div class="content">
             <div class="panel">
                 <div class="front">

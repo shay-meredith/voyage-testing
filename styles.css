@@ -1,6 +1,22 @@
 * {
+  box-sizing: border-box;
   margin: 0;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    font-size: 100%;
+    color: #333;
+    line-height: 1.6;
+    font-family: "Lato", sans-serif;
+  }
+
 ul {
   list-style: none;
   padding-left: 5px;
@@ -44,25 +60,26 @@ li {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  z-index: 9999;
 }
 
 #nav-icon span {
-display: block;
-position: absolute;
-height: 9px;
-width: 100%;
-background: teal;
-border-radius: 9px;
-opacity: 1;
-left: 0;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
--webkit-transition: 0.25s ease-in-out;
--moz-transition: 0.25s ease-in-out;
--o-transition: 0.25s ease-in-out;
-transition: 0.25s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: teal;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 #nav-icon span:nth-child(1) {
@@ -115,6 +132,32 @@ transition: 0.25s ease-in-out;
 button {
   display: none;
 }
+
+.drawer-container {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+.drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 20rem;
+    
+    color: #eaeaea;
+    padding: 1rem;
+    background-color: #444;
+    transform:translate3d(-20em,0,0);
+    opacity: 0.5;
+    transition:0.2s ease-out;
+  }
+  
+  .drawer-open .drawer {
+    opacity: 1;
+    transform:translate3d(0,0,0);
+  }
+
 .content {
   grid-area: c;
   text-align: center;
@@ -228,5 +271,8 @@ button {
   button:hover {
     box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+  }
+  .drawer-container {
+      display: none;
   }
 }
