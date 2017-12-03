@@ -108,15 +108,17 @@ button:hover {
     transform: rotateY(-180deg);
   }
   
-  .flipped .back {
-    transform: rotateY(0deg);
-    position: absolute;
-  }
-  
-  .flipped .front {
-    transform: rotateY(180deg);
-    position: absolute;
-  }
+  .flipped .back { 
+    transform: rotateY(0deg); 
+    position: absolute; 
+    transform: translate3d(100px, 50px, 10px); 
+  } 
+   
+  .flipped .front { 
+    transform: rotateY(180deg); 
+    position: absolute; 
+    transform: translate3d(100px, 50px, 10px); 
+  } 
 
 .card {
     padding: 2px 16px;
