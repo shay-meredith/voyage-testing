@@ -12,4 +12,7 @@ $(document).ready(function(){
             return 'Card Info';
         });
     });
+    $('#nav-icon').click(function(){
+		$(this).toggleClass('open');
+	});
 });
