@@ -26,6 +26,7 @@ li {
   margin: 20px 0;
 }
 .container {
+  min-width: 100%;
   display: grid;
   grid-gap: 0px;
   grid-template-columns: repeat(12, 1fr);
@@ -44,7 +45,7 @@ li {
 .menu {
   grid-area: m;
   text-align: center;
-  background-color: #e84855;
+  background-color: #ee6e73;
   display: block;
 }
 #nav-icon {
@@ -210,7 +211,6 @@ button {
 }
 
 .front {
-  background: teal;
 }
 
 .back {
@@ -222,7 +222,7 @@ button {
 }
 
 .flipped {
-    z-index: 99;
+  z-index: 99;
 }
 
 .flipped .back {
@@ -241,11 +241,15 @@ button {
 
 @media screen and (min-width: 650px) {
   .container {
+    min-width: 100%;
     grid-template-columns: repeat(2, minmax(100px, 1fr)) repeat(10, 1fr);
     grid-template-areas:
       "h h m m m m m m m m m m"
       "i i c c c c c c c c c c"
       "i i c c c c c c c c c c";
+  }
+  nav {
+      min-height: 99%;
   }
   .info {
     text-align: left;
@@ -260,65 +264,8 @@ button {
   #nav-icon {
     display: none;
   }
-  .menu-button-container {
-    position: absolute;
-    right: 5px;
-    top: 15px;
-  }
-  .menu-button {
-    background-color: #1e88e5;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    margin: 10px 5px 0px 5px;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition: all 0.2s;
-  }
-  
-  #dropdown-menu {
-    position: relative;
-    display: inline-block;
-  }
-  /* Dropdown Content (Hidden by Default) */
-  #dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
 
-  /* Links inside the dropdown */
-  #dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
 
-  /* Change color of dropdown links on hover */
-  #dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  /* Show the dropdown menu on hover */
-  #dropdown-menu:hover #dropdown-content {
-    display: block;
-  }
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown-menu:hover .menu-button {
-    background-color: #3e8e41;
-  }
-  button:hover {
-    box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
   .drawer-container {
     display: none;
   }

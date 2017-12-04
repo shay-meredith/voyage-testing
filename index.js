@@ -49,4 +49,7 @@ $(document).ready(function() {
       drawerOpen = true;
     }
   };
+
+  //Materialize dropdown trigger
+  $(".dropdown-trigger").dropdown({ hover: false });
 });
